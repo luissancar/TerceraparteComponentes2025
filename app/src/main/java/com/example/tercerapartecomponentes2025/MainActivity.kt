@@ -37,7 +37,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
        // MyCard()
         //MyBadgeBox()
        // MyDivider()
-        MyDropDownMenu()
+        //MyDropDownMenu()
+        //MySlider()
+        //MySlider02()
+        MyAlertDialog01()
     }
 }
 
