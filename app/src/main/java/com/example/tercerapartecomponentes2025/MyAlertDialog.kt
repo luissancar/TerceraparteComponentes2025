@@ -38,14 +38,14 @@ import androidx.compose.ui.window.DialogProperties
 @Composable
 fun MyAlertDialog01() {
     // son vistas declarativas, lo mostraremos dependiendo de un mutable state
-    val openDialog = remember { mutableStateOf(true) }
+    var openDialog by remember { mutableStateOf(true) }
 
-    if (openDialog.value) {
+    if (openDialog) {
         BasicAlertDialog(
             onDismissRequest = {
                 // Descarta el diálogo cuando el usuario hace clic fuera del diálogo o en el botón de retroceso.
                 // Si deseas desactivar esa funcionalidad, simplemente utiliza un onDismissRequest vacío
-                openDialog.value = false
+                openDialog = false
             },
         ) {
             Surface(  //Surface es un contenedor que proporciona un fondo con un color
@@ -62,7 +62,7 @@ fun MyAlertDialog01() {
                     )
                     Spacer(modifier = Modifier.height(24.dp))
                     TextButton(
-                        onClick = { openDialog.value = false },
+                        onClick = { openDialog = false },
                         modifier = Modifier.shadow(1.dp, shape = MaterialTheme.shapes.small) // Aplicar sombra
                     ) {
                         Text("Confirm")
