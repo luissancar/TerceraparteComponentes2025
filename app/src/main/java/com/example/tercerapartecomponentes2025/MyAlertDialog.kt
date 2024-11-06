@@ -63,7 +63,8 @@ fun MyAlertDialog01() {
                     Spacer(modifier = Modifier.height(24.dp))
                     TextButton(
                         onClick = { openDialog = false },
-                        modifier = Modifier.shadow(1.dp, shape = MaterialTheme.shapes.small) // Aplicar sombra
+                        modifier = Modifier.
+                        shadow(1.dp, shape = MaterialTheme.shapes.small) // Aplicar sombra
                     ) {
                         Text("Confirm")
                     }

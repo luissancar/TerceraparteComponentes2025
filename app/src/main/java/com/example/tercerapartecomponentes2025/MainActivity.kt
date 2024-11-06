@@ -59,6 +59,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             show = false
             enaButton = true
         }
+        MyBadgeBox()
     }
 }
 

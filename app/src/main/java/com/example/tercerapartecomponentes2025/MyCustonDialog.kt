@@ -67,9 +67,9 @@ fun MyCustonDialog(show: Boolean, onDismiss: () -> Unit) {
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     MyTittle("Título")
-                    ItemCuenta("mail@gmail.com",R.drawable.ima01)
-                    ItemCuenta("mail@gmail.com",R.drawable.ima02)
-                    ItemCuenta("Add",R.drawable.ic_launcher_background)
+                    lista.forEach {
+                        ItemCuenta(it.email,it.image)
+                    }
                 }
             }
         }
